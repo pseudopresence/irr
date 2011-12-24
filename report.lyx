@@ -1,0 +1,271 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\author{Chris Swetenham (s1149322)}
+\title{Peer-to-Peer Human-Robot Interaction in Collaborative Tasks}
+\date{November 9, 2011}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Gestures, facial expressions, natural language, physical interaction/touch
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Recognising and exhibiting emotions, intention
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Learning and respecting social convention
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Mixed-initiative interaction - not fixed turns in conversation
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Conversation, speech recognition and generation, natural language processing
+ and generation.
+ Generating referring expressions
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Nasa robonaut
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Modelling what the other can see and giving and understanding references
+ to objects in their frame of reference
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Safety
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Online games for evaluating and learning, data collection
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Human-Robot Interaction in collaborative tasks is a multidisciplinary problem
+ which brings together much of the current work in robotics, natural language,
+ human-computer interaction, and artificial intelligence.
+ Human and robot participants must be able to understand each other without
+ impediment to the task, must understand each other's roles and intentions
+ in the task, and must agree on steps to be performed to complete the task.
+ The robots must also be careful not to take actions which might endanger
+ the human participants, and respect social norms.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% (not interrupting at inopportune times, maintaining appropriate distances
+ and levels of attention).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When performing a task, humans have many simultaneous modes of interaction:
+ speech, facial expressions and stances, gaze direction, gestures, direct
+ physical contact.
+ These may serve several purposes: to convey intention or emotion, to direct
+ the other participant's actions or attention, or to directly execute a
+ step in the plan for the task.
+ For example, a pointing gesture could direct the other participant's attention
+ to a tool or area, or it could tell them to move themselves to the location
+ pointed to.
+ Extending an arm holding an object towards the other participants signals
+ the intention to hand over the object while also being the first step of
+ the execution of this intention.
+ It may be be necessary to consider multiple modes at once to understand
+ the overall meaning.
+\end_layout
+
+\begin_layout Standard
+In this report we will cover research into recognition of speech, gestures,
+ and expressions; their interpretation into intention and emotion; the generatio
+n of speech, gestures and expressions for the robot, and their use in expressing
+ the robot's intention; the use of cognitive modelling of the other participants
+ to better create and understand terms referring to objects in a shared
+ environment; techniques to allow the use of natural conversation in shared
+ planning and execution of a task; and techniques for learning and evaluating
+ social and conversational behaviour of agents.
+\end_layout
+
+\end_body
+\end_document
