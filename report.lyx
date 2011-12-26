@@ -267,5 +267,54 @@ n of speech, gestures and expressions for the robot, and their use in expressing
  social and conversational behaviour of agents.
 \end_layout
 
+\begin_layout Section
+TODO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Projects:
+\end_layout
+
+\begin_layout Plain Layout
+JAST -> JAMES
+\end_layout
+
+\begin_layout Plain Layout
+Kismet -> Leonardo
+\end_layout
+
+\begin_layout Plain Layout
+Lino
+\end_layout
+
+\begin_layout Plain Layout
+INDIGO
+\end_layout
+
+\begin_layout Plain Layout
+Robonaut -> Robonaut 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "References/refs"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
