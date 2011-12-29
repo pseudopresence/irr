@@ -219,24 +219,7 @@ Human-Robot Interaction in collaborative tasks is a multidisciplinary problem
  impediment to the task, must understand each other's roles and intentions
  in the task, and must agree on steps to be performed to complete the task.
  The robots must also be careful not to take actions which might endanger
- the human participants, and respect social norms.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% (not interrupting at inopportune times, maintaining appropriate distances
- and levels of attention).
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+ the human participants.
 \end_layout
 
 \begin_layout Standard
@@ -257,14 +240,11 @@ When performing a task, humans have many simultaneous modes of interaction:
 \end_layout
 
 \begin_layout Standard
-In this report we will cover research into recognition of speech, gestures,
- and expressions; their interpretation into intention and emotion; the generatio
-n of speech, gestures and expressions for the robot, and their use in expressing
- the robot's intention; the use of cognitive modelling of the other participants
- to better create and understand terms referring to objects in a shared
- environment; techniques to allow the use of natural conversation in shared
- planning and execution of a task; and techniques for learning and evaluating
- social and conversational behaviour of agents.
+In this report we will cover several projects in the area of collaborative
+ problem-solving in human-robot interaction.
+ We will in particular focus on approaches to natural language generation,
+ intention recognition and the use natural conversation in shared planning
+ and execution of a task.
 \end_layout
 
 \begin_layout Section
@@ -280,7 +260,11 @@ Projects:
 \end_layout
 
 \begin_layout Plain Layout
-JAST -> JAMES
+Lino->iCat
+\end_layout
+
+\begin_layout Plain Layout
+iCat + AC -> JAST -> JAMES
 \end_layout
 
 \begin_layout Plain Layout
@@ -288,15 +272,32 @@ Kismet -> Leonardo
 \end_layout
 
 \begin_layout Plain Layout
-Lino
-\end_layout
-
-\begin_layout Plain Layout
 INDIGO
 \end_layout
 
 \begin_layout Plain Layout
+Paro
+\end_layout
+
+\begin_layout Plain Layout
 Robonaut -> Robonaut 2
+\end_layout
+
+\begin_layout Plain Layout
+Build core of lit review around the software architectures used in each
+ project? And maybe some various strategies for error-handling, etc scenarios?
+\end_layout
+
+\begin_layout Plain Layout
+GIVE challenge: can give history of entries, strategies, performance
+\end_layout
+
+\begin_layout Plain Layout
+Areas: intention, nlg, cps
+\end_layout
+
+\begin_layout Standard
+Intro: describe the general task and some of the projects covered.
 \end_layout
 
 \end_inset
