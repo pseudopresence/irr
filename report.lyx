@@ -66,6 +66,18 @@
 
 \begin_body
 
+\begin_layout Title
+Collaborative Problem Solving in Human-Robot Interaction
+\end_layout
+
+\begin_layout Author
+Chris Swetenham (s1149322)
+\end_layout
+
+\begin_layout Date
+First Draft - 1st Jan 2012
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -212,14 +224,35 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Human-Robot Interaction in collaborative tasks is a multidisciplinary problem
- which brings together much of the current work in robotics, natural language,
- human-computer interaction, and artificial intelligence.
+Collaborative Problem Solving is a multidisciplinary problem in Human-Robot
+ Interaction which brings together much of the current work in robotics,
+ natural language, human-computer interaction, and artificial intelligence.
  Human and robot participants must be able to understand each other without
  impediment to the task, must understand each other's roles and intentions
  in the task, and must agree on steps to be performed to complete the task.
  The robots must also be careful not to take actions which might endanger
  the human participants.
+\end_layout
+
+\begin_layout Standard
+Human-Agent Interaction is an extension of Human-Computer Interaction to
+ interactions with software that exhibits some form of agency, potentially
+ embodied and situated in a virtual world.
+ Human-Robot Interaction is an extension of Human-Agent Interaction to interacti
+ons with embodied, situated agents in the physical world.
+ TODO gives a survey of the field of Human-Robot Interaction.
+\end_layout
+
+\begin_layout Standard
+Social Robotics studies robots which interact by social means with humans
+ and each other, including gestures, facial expressions and speech.
+ TODO gives a survey of Social Robotics.
+\end_layout
+
+\begin_layout Standard
+Human-Robot Collaboration studies social interaction between humans and
+ robots in the context of a shared task to be performed.
+ TODO gives a survey of Human-Robot Collaboration.
 \end_layout
 
 \begin_layout Standard
@@ -241,7 +274,8 @@ When performing a task, humans have many simultaneous modes of interaction:
 
 \begin_layout Standard
 In this report we will cover several projects in the area of collaborative
- problem-solving in human-robot interaction.
+ problem-solving in human-robot interaction between a single robot and single
+ human participant.
  We will in particular focus on approaches to natural language generation,
  intention recognition and the use natural conversation in shared planning
  and execution of a task.
@@ -249,6 +283,72 @@ In this report we will cover several projects in the area of collaborative
 
 \begin_layout Section
 TODO
+\end_layout
+
+\begin_layout Standard
+In terms of communication from the robot to the human, the Leonardo project
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breazeal2004"
+
+\end_inset
+
+ focuses on an expressive robot capable of many facial and body gestures
+ and without any natural language generation or speech synthesis capabilites.
+\end_layout
+
+\begin_layout Standard
+In terms of working on a shared task, the Leonardo project focuses on the
+ human teaching the robot how to participate in a task.
+ The idea is that active tutelage can be much more effective than relying
+ on blind experimentation by the robot or complex, brittle a priori knowledge
+ in getting the robot to perform a new task.
+\end_layout
+
+\begin_layout Standard
+Joint Intention refers to the state of affairs where several participants
+ share a common goal and a common plan for achieving that goal.
+ In the Leonardo project, the human participant sets the goal and teaches
+ the robot the steps required.
+ In the JAST project, the robot participant sets the goal and teaches the
+ human the steps required.
+\end_layout
+
+\begin_layout Standard
+Natural Language Generation is the counterpart of Natural Language Processing.
+ It refers to the production of human text or speech from some internal
+ data structure specific to the agent.
+ In the context of this review the most important aspects are communicating
+ the actions to be performed and the objects they should be performed on.
+ In fact, generating descriptions of objects and their location is easy;
+ the difficult part is deciding which information to include or not in the
+ description.
+ If there is not enough information, the description can be ambiguous or
+ confusing for the human listener; if the information is too specific, it
+ may seem to the listener as though the extra information was included for
+ a specific reason even if it is irrelevant to the task.
+\end_layout
+
+\begin_layout Standard
+Speech output can be accompanied by facial expressions or gestures, such
+ as looking at and/or pointing to the object being referenced.
+ This an example of 
+\emph on
+multimodal interaction
+\emph default
+.
+ In the JAST project, the generation of referring expressions and the use
+ of gestures were both studied and evaluated for their effectiveness in
+ communicating with the human participant.
+ In the Leonardo project, speech output was avoided entirely in favour of
+ an expressive body and facial design.
+\end_layout
+
+\begin_layout Standard
+Another aspect of communication in cooperative problem-solving, again expressibl
+e and recognisable through both speech and gesture, is the meta-level dialogue
+ indicating agreement or disagreement with the other participant, and understand
+ing or not understanding the other participant.
 \end_layout
 
 \begin_layout Standard
@@ -300,6 +400,18 @@ Areas: intention, nlg, cps
 Intro: describe the general task and some of the projects covered.
 \end_layout
 
+\begin_layout Plain Layout
+Talk about 
+\begin_inset Quotes eld
+\end_inset
+
+joint intention theory
+\begin_inset Quotes erd
+\end_inset
+
+?
+\end_layout
+
 \end_inset
 
 
@@ -309,7 +421,7 @@ Intro: describe the general task and some of the projects covered.
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
-bibfiles "References/refs"
+bibfiles "References/IRR"
 options "plain"
 
 \end_inset
