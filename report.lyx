@@ -223,15 +223,46 @@ status open
 Introduction
 \end_layout
 
+\begin_layout Subsection
+Problem Statement
+\end_layout
+
 \begin_layout Standard
 Collaborative Problem Solving is a multidisciplinary problem in Human-Robot
  Interaction which brings together much of the current work in robotics,
  natural language, human-computer interaction, and artificial intelligence.
  Human and robot participants must be able to understand each other without
  impediment to the task, must understand each other's roles and intentions
- in the task, and must agree on steps to be performed to complete the task.
+ in the task (
+\emph on
+intention recognition
+\emph default
+), and must agree on steps to be performed to complete the task (
+\emph on
+collaborative problem solving
+\emph default
+ and 
+\emph on
+joint intention
+\emph default
+).
  The robots must also be careful not to take actions which might endanger
- the human participants.
+ the human participants (
+\emph on
+safety
+\emph default
+).
+ Speech output can be accompanied by facial expressions or gestures, such
+ as looking at and/or pointing to the object being referenced.
+ This an example of 
+\emph on
+multimodal interaction
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Area
 \end_layout
 
 \begin_layout Standard
@@ -240,19 +271,169 @@ Human-Agent Interaction is an extension of Human-Computer Interaction to
  embodied and situated in a virtual world.
  Human-Robot Interaction is an extension of Human-Agent Interaction to interacti
 ons with embodied, situated agents in the physical world.
- TODO gives a survey of the field of Human-Robot Interaction.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goodrich2007"
+
+\end_inset
+
+ gives a survey of the field of Human-Robot Interaction.
 \end_layout
 
 \begin_layout Standard
-Social Robotics studies robots which interact by social means with humans
- and each other, including gestures, facial expressions and speech.
- TODO gives a survey of Social Robotics.
+Social Human-Robot Interaction studies robots which interact by social means
+ with humans and each other, including gestures, facial expressions and
+ speech.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2003"
+
+\end_inset
+
+ gives a survey of Social Human-Robot Interaction.
 \end_layout
 
 \begin_layout Standard
 Human-Robot Collaboration studies social interaction between humans and
  robots in the context of a shared task to be performed.
- TODO gives a survey of Human-Robot Collaboration.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bauer2008"
+
+\end_inset
+
+ gives a survey of Human-Robot Collaboration.
+\end_layout
+
+\begin_layout Subsection
+Overview
+\end_layout
+
+\begin_layout Standard
+In this report we will cover several projects in the area of collaborative
+ problem-solving in human-robot interaction between a single robot and single
+ human participant.
+ We will in particular focus on approaches to natural language generation,
+ intention recognition and the use natural conversation in shared planning
+ and execution of a task.
+\end_layout
+
+\begin_layout Standard
+TODO Section-by-section breakdown
+\end_layout
+
+\begin_layout Section
+Human-Robot Communication
+\end_layout
+
+\begin_layout Standard
+In terms of communication from the robot to the human, the Leonardo project
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breazeal2004"
+
+\end_inset
+
+ focuses on an expressive robot capable of many facial and body gestures
+ and without any natural language generation or speech synthesis capabilites.
+\end_layout
+
+\begin_layout Section
+Natural Language Processing and Generation
+\end_layout
+
+\begin_layout Standard
+In general, Speech Recognition and Generation are treated as solved problems
+ in human-robot interaction, with some leeway for the inevitable interpretation
+ errors from either participant.
+ Speech is then treated in terms of text.
+ Natural Language Processing is a well established field dealing with processing
+ the text into some more abstract model.
+ Natural Language Generation is the counterpart of Natural Language Processing.
+ It refers to the production of human text or speech from some internal
+ data structure specific to the agent.
+ In the context of this review the most important aspects are communicating
+ the actions to be performed and the objects they should be performed on.
+ In fact, generating descriptions of objects and their location is easy;
+ the difficult part is deciding which information to include or not in the
+ description.
+ If there is not enough information, the description can be ambiguous or
+ confusing for the human listener; if the information is too specific, it
+ may seem to the listener as though the extra information was included for
+ a specific reason even if it is irrelevant to the task.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foster2009a"
+
+\end_inset
+
+ the JAST project has investigated different strategies for referring expression
+s and their impact on both task performance and user satisfaction.
+ In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Byron2009"
+
+\end_inset
+
+ the GIVE challenge evaluates different strategies for guiding a user in
+ an online game to move through an environment and perform actions.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Belz2008"
+
+\end_inset
+
+ find that task performance metrics do not correlate with metrics that measure
+ how 
+\begin_inset Quotes eld
+\end_inset
+
+human-like
+\begin_inset Quotes erd
+\end_inset
+
+ the output of an NLG system is.
+\end_layout
+
+\begin_layout Section
+Gesture Recognition and Generation
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Koay2006"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Huber2008"
+
+\end_inset
+
+ explore handing-over gestures and approaches that are comfortable and recognisa
+ble to the human user.
+\end_layout
+
+\begin_layout Section
+Intent Recognition
+\end_layout
+
+\begin_layout Standard
+The JAST robot can infer the intent of the human user when they pick up
+ pieces and correct them when they pick up the wrong piece [TODO].
+\end_layout
+
+\begin_layout Section
+Multimodal Interaction
 \end_layout
 
 \begin_layout Standard
@@ -273,28 +454,55 @@ When performing a task, humans have many simultaneous modes of interaction:
 \end_layout
 
 \begin_layout Standard
-In this report we will cover several projects in the area of collaborative
- problem-solving in human-robot interaction between a single robot and single
- human participant.
- We will in particular focus on approaches to natural language generation,
- intention recognition and the use natural conversation in shared planning
- and execution of a task.
-\end_layout
-
-\begin_layout Section
-TODO
-\end_layout
-
-\begin_layout Standard
-In terms of communication from the robot to the human, the Leonardo project
+In the JAST project, the generation of referring expressions and the use
+ of gestures were both studied and evaluated for their effectiveness in
+ communicating with the human participant [TODO].
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Breazeal2004"
+key "VanDerSluis"
 
 \end_inset
 
- focuses on an expressive robot capable of many facial and body gestures
- and without any natural language generation or speech synthesis capabilites.
+ gives an algorithm for the generation of multimodal referring expressions.
+ In the Leonardo project, speech output was avoided entirely in favour of
+ an expressive body and facial design.
+ [TODO] describes the MultiML language for representing multimodal actions
+ in a dialogue.
+\end_layout
+
+\begin_layout Section
+Joint Intention
+\end_layout
+
+\begin_layout Standard
+Joint Intention refers to the state of affairs where several participants
+ share a common goal and a common plan for achieving that goal.
+ In order to reach this situation, both participants must continually communicat
+e their intentions as the execution of the task progresses.
+\end_layout
+
+\begin_layout Section
+Collaborative Problem-Solving
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Larsson2000"
+
+\end_inset
+
+ describes the TRINDI dialog engine toolkit which has been used in the JAST
+ project among others.
+ In the Leonardo project, the human participant sets the goal and teaches
+ the robot the steps required [TODO].
+ In the JAST project, the robot participant sets the goal and teaches the
+ human the steps required [TODO].
+\end_layout
+
+\begin_layout Section
+Learning
 \end_layout
 
 \begin_layout Standard
@@ -305,50 +513,56 @@ In terms of working on a shared task, the Leonardo project focuses on the
  in getting the robot to perform a new task.
 \end_layout
 
-\begin_layout Standard
-Joint Intention refers to the state of affairs where several participants
- share a common goal and a common plan for achieving that goal.
- In the Leonardo project, the human participant sets the goal and teaches
- the robot the steps required.
- In the JAST project, the robot participant sets the goal and teaches the
- human the steps required.
+\begin_layout Section
+Mixed-Initiative Interaction
 \end_layout
 
 \begin_layout Standard
-Natural Language Generation is the counterpart of Natural Language Processing.
- It refers to the production of human text or speech from some internal
- data structure specific to the agent.
- In the context of this review the most important aspects are communicating
- the actions to be performed and the objects they should be performed on.
- In fact, generating descriptions of objects and their location is easy;
- the difficult part is deciding which information to include or not in the
- description.
- If there is not enough information, the description can be ambiguous or
- confusing for the human listener; if the information is too specific, it
- may seem to the listener as though the extra information was included for
- a specific reason even if it is irrelevant to the task.
+When both participants contribute towards the goal, this is termed a Mixed-Initi
+ative system.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Guinn1996"
+
+\end_inset
+
+ describes an early model of mixed-initiative communication based on exchanging
+ information and deductions between agents until a conclusion is reached.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breazeal2004b"
+
+\end_inset
+
+ describe how Leonardo can suggest it takes the initiative or request help
+ from its human partner.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Blaylock2005"
+
+\end_inset
+
+ describe a model for negotiating shared goals and plans between participants,
+ and use it to analyse a planning discussion between two human participants.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ferguson2007"
+
+\end_inset
+
+ describe an architecture for implementing a similar model in an agent.
+\end_layout
+
+\begin_layout Section
+Safety
 \end_layout
 
 \begin_layout Standard
-Speech output can be accompanied by facial expressions or gestures, such
- as looking at and/or pointing to the object being referenced.
- This an example of 
-\emph on
-multimodal interaction
-\emph default
-.
- In the JAST project, the generation of referring expressions and the use
- of gestures were both studied and evaluated for their effectiveness in
- communicating with the human participant.
- In the Leonardo project, speech output was avoided entirely in favour of
- an expressive body and facial design.
-\end_layout
-
-\begin_layout Standard
-Another aspect of communication in cooperative problem-solving, again expressibl
-e and recognisable through both speech and gesture, is the meta-level dialogue
- indicating agreement or disagreement with the other participant, and understand
-ing or not understanding the other participant.
+TODO
 \end_layout
 
 \begin_layout Standard
@@ -396,7 +610,7 @@ GIVE challenge: can give history of entries, strategies, performance
 Areas: intention, nlg, cps
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Intro: describe the general task and some of the projects covered.
 \end_layout
 
@@ -417,12 +631,30 @@ joint intention theory
 
 \end_layout
 
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+Collaborative Problem-Solving is a dynamic and promising area of Human-Robot
+ Interaction research, with applications in space[TODO], medical and elderly
+ care[TODO], and any context in which it is desirable to have autonomous
+ robot participants perform tasks in a dangerous environment in collaboration
+ with human participants, such as military applications[TODO] and urban
+ search and rescue[TODO].
+ Collaborative problem-solving, mixed-intiative and multimodal interactions
+ allow for natural integration of robot members in a team without requiring
+ special training of the human participants, and as the robot becomes more
+ aware of intent and social cues, it is regarded less as a tool and more
+ as a participant[TODO].
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
 bibfiles "References/IRR"
-options "plain"
+options "amsalpha"
 
 \end_inset
 
