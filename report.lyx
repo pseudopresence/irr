@@ -78,147 +78,6 @@ Chris Swetenham (s1149322)
 First Draft - 1st Jan 2012
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Gestures, facial expressions, natural language, physical interaction/touch
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Recognising and exhibiting emotions, intention
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Learning and respecting social convention
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Mixed-initiative interaction - not fixed turns in conversation
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Conversation, speech recognition and generation, natural language processing
- and generation.
- Generating referring expressions
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Nasa robonaut
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Modelling what the other can see and giving and understanding references
- to objects in their frame of reference
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Safety
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Online games for evaluating and learning, data collection
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Introduction
 \end_layout
@@ -322,15 +181,97 @@ In this report we will cover several projects in the area of collaborative
 \end_layout
 
 \begin_layout Standard
-TODO Section-by-section breakdown
+In Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Human-Robot-Communication"
+
+\end_inset
+
+ we will look at Human-Robot communication in general.
+ In Sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Natural-Language-Processing"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Gesture-Recognition-and"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Multimodal-Interaction"
+
+\end_inset
+
+ we will look at different types of communication.
+ In Sections 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Collaborative-Problem-Solving"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Learning"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Mixed-Initiative-Interaction"
+
+\end_inset
+
+ we will look at how the collaborative problem-solving aspect comes together.
+ Finally in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Discussion"
+
+\end_inset
+
+ we will discuss and summarise.
 \end_layout
 
 \begin_layout Section
 Human-Robot Communication
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Human-Robot-Communication"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-In terms of communication from the robot to the human, the Leonardo project
+At the core of Human-Robot Communication, is the notion of having multiples
+ 
+\emph on
+modes
+\emph default
+ of interaction or communication.
+ These interactions can be generated from or interpreted to an internal
+ grammar by the robot system.
+ The 'sentences' in the grammar are operated on by a dialog engine, which
+ interacts with the task planning system and the robot's internal model
+ of the world.
+\end_layout
+
+\begin_layout Standard
+In terms of communication from the robot to the human, there is some leeway
+ in which input and output modalities are provided to the robot.
+ The Leonardo project
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Breazeal2004"
@@ -339,10 +280,30 @@ key "Breazeal2004"
 
  focuses on an expressive robot capable of many facial and body gestures
  and without any natural language generation or speech synthesis capabilites.
+ The JAST project [TODO] combines two industrial arms with the iCat expressive
+ robot face, and features speech generation and recognition.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "VanBreemen2004"
+
+\end_inset
+
+ describes the Lino and iCat robots and the principles used to animate them.
+ Museum guide robots such as INDIGO typically feature speech but not gesture
+ modes of communication [TODO] although the Robotinho project does use gestures
+ [TODO].
 \end_layout
 
 \begin_layout Section
 Natural Language Processing and Generation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Natural-Language-Processing"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -403,9 +364,40 @@ human-like
 
 \begin_layout Section
 Gesture Recognition and Generation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Gesture-Recognition-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+When humans communicate in a shared task they will often use gestures as
+ well as speech.
+ These may serve several purposes: to convey intention or emotion, to direct
+ the other participant's actions or attention, or to directly execute a
+ step in the plan for the task.
+ For example, a pointing gesture could direct the other participant's attention
+ to a tool or area, or it could tell them to move themselves to the location
+ pointed to.
+\end_layout
+
+\begin_layout Standard
+In a robot, gesture recognition will be performed as a step after the visual
+ interpretation of a scene from video data.
+\end_layout
+
+\begin_layout Subsection
+Hand-over of objects
+\end_layout
+
+\begin_layout Standard
+Extending an arm holding an object towards the other participants signals
+ the intention to hand over the object while also being the first step of
+ the execution of this intention.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Koay2006"
@@ -423,34 +415,47 @@ key "Huber2008"
 ble to the human user.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Intent Recognition
 \end_layout
 
 \begin_layout Standard
-The JAST robot can infer the intent of the human user when they pick up
- pieces and correct them when they pick up the wrong piece [TODO].
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nehaniv2005"
+
+\end_inset
+
+ looks at classifying human gestures and recognising intent, and find that
+ the context as well as the gesture itself need to be taken into account.
+ The JAST robot can infer the intent of the human user when they pick up
+ pieces and correct them when they pick up the wrong piece 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rickert2008"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
 Multimodal Interaction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Multimodal-Interaction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 When performing a task, humans have many simultaneous modes of interaction:
  speech, facial expressions and stances, gaze direction, gestures, direct
  physical contact.
- These may serve several purposes: to convey intention or emotion, to direct
- the other participant's actions or attention, or to directly execute a
- step in the plan for the task.
- For example, a pointing gesture could direct the other participant's attention
- to a tool or area, or it could tell them to move themselves to the location
- pointed to.
- Extending an arm holding an object towards the other participants signals
- the intention to hand over the object while also being the first step of
- the execution of this intention.
- It may be be necessary to consider multiple modes at once to understand
- the overall meaning.
+ It may be beneficial or even necessary to consider multiple modes at once
+ to understand the overall meaning.
 \end_layout
 
 \begin_layout Standard
@@ -472,18 +477,14 @@ key "VanDerSluis"
 \end_layout
 
 \begin_layout Section
-Joint Intention
-\end_layout
-
-\begin_layout Standard
-Joint Intention refers to the state of affairs where several participants
- share a common goal and a common plan for achieving that goal.
- In order to reach this situation, both participants must continually communicat
-e their intentions as the execution of the task progresses.
-\end_layout
-
-\begin_layout Section
 Collaborative Problem-Solving
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Collaborative-Problem-Solving"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -493,16 +494,92 @@ key "Larsson2000"
 
 \end_inset
 
- describes the TRINDI dialog engine toolkit which has been used in the JAST
- project among others.
- In the Leonardo project, the human participant sets the goal and teaches
+ describes the TRINDI dialog engine toolkit.
+ It is based on the notion of a shared or individual 
+\emph on
+information state
+\emph default
+ which is updated by the 
+\emph on
+dialog moves
+\emph default
+ of the participants.
+ The tookit defines the basic data structures and some dialog moves, but
+ the precise information and the choice of dialog moves can be selected
+ according to the task required.
+ Simple examples of dialog moves are asking or answering a question.
+ The TRINDI toolkit has been used in the JAST project.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Blaylock2005"
+
+\end_inset
+
+ propose a different system which includes dialogue moves (which they call
+ 
+\emph on
+interaction acts
+\emph default
+) which are used to negotiate, accept, or reject changes to the shared problem-s
+olving state, such as deciding to focus on a particular subproblem or adopt
+ a certain solution.
+ In addition, there are wrapped in 
+\emph on
+grounding acts
+\emph default
+ which handle turn-taking in conversation, requests for acknowledgement,
+ and requests for clarification.
+\end_layout
+
+\begin_layout Standard
+Joint Intention refers to the state of affairs where several participants
+ share a common goal and a common plan for achieving that goal.
+ In order to reach this situation, both participants must continually communicat
+e their intentions as the execution of the task progresses.
+ In the above system, joint intention is achieved by negotiating every change
+ to a shared problem-solving state.
+\end_layout
+
+\begin_layout Standard
+In the Leonardo project, the human participant sets the goal and teaches
  the robot the steps required [TODO].
- In the JAST project, the robot participant sets the goal and teaches the
- human the steps required [TODO].
+ For example, the robot is taught to press a button, and then is given the
+ task of pressing several buttons.
+\end_layout
+
+\begin_layout Standard
+In the reverse direction, in the JAST project, the robot participant sets
+ the goal and teaches the human the steps required [TODO].
+ The human is taught sub-tasks which are then combined into a larger task.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2006"
+
+\end_inset
+
+ describes NASA's HRI/OS, developed as part of the Robonaut robotic astronaut
+ project.
+ HRI/OS allows for a wide range of interactions between humans and robots,
+ from remote teleoperation to local collaboration.
+ Robots using this system can request help from humans or other robots when
+ they are unable to complete a task by themselves.
 \end_layout
 
 \begin_layout Section
 Learning
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Learning"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -515,6 +592,13 @@ In terms of working on a shared task, the Leonardo project focuses on the
 
 \begin_layout Section
 Mixed-Initiative Interaction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Mixed-Initiative-Interaction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -558,11 +642,28 @@ key "Ferguson2007"
 \end_layout
 
 \begin_layout Section
-Safety
+Discussion
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discussion"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-TODO
+Collaborative Problem-Solving is a dynamic and promising area of Human-Robot
+ Interaction research, with applications in space[TODO], medical and elderly
+ care[TODO], and any context in which it is desirable to have autonomous
+ robot participants perform tasks in a dangerous environment in collaboration
+ with human participants, such as military applications[TODO] and urban
+ search and rescue[TODO].
+ Collaborative problem-solving, mixed-intiative and multimodal interactions
+ allow for natural integration of robot members in a team without requiring
+ special training of the human participants, and as the robot becomes more
+ aware of intent and social cues, it is regarded less as a tool and more
+ as a participant[TODO].
 \end_layout
 
 \begin_layout Standard
@@ -607,46 +708,12 @@ GIVE challenge: can give history of entries, strategies, performance
 \end_layout
 
 \begin_layout Plain Layout
-Areas: intention, nlg, cps
-\end_layout
-
-\begin_layout Plain Layout
-Intro: describe the general task and some of the projects covered.
-\end_layout
-
-\begin_layout Plain Layout
-Talk about 
-\begin_inset Quotes eld
-\end_inset
-
-joint intention theory
-\begin_inset Quotes erd
-\end_inset
-
-?
+Talk about safety? Appearance, uncanny valley?
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Discussion
-\end_layout
-
-\begin_layout Standard
-Collaborative Problem-Solving is a dynamic and promising area of Human-Robot
- Interaction research, with applications in space[TODO], medical and elderly
- care[TODO], and any context in which it is desirable to have autonomous
- robot participants perform tasks in a dangerous environment in collaboration
- with human participants, such as military applications[TODO] and urban
- search and rescue[TODO].
- Collaborative problem-solving, mixed-intiative and multimodal interactions
- allow for natural integration of robot members in a team without requiring
- special training of the human participants, and as the robot becomes more
- aware of intent and social cues, it is regarded less as a tool and more
- as a participant[TODO].
 \end_layout
 
 \begin_layout Standard
