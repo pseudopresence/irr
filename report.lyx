@@ -67,7 +67,7 @@
 \begin_body
 
 \begin_layout Title
-Collaborative Problem Solving in Human-Robot Interaction
+Collaborative Problem-Solving in Human-Robot Interaction
 \end_layout
 
 \begin_layout Author
@@ -75,7 +75,7 @@ Chris Swetenham (s1149322)
 \end_layout
 
 \begin_layout Date
-First Draft - 1st Jan 2012
+19th Jan 2012
 \end_layout
 
 \begin_layout Section
@@ -87,20 +87,37 @@ Problem Statement
 \end_layout
 
 \begin_layout Standard
-Collaborative Problem Solving is a multidisciplinary problem in Human-Robot
+Collaborative Problem-Solving is a multidisciplinary problem in Human-Robot
  Interaction which brings together much of the current work in robotics,
  natural language, human-computer interaction, and artificial intelligence.
- Human and robot participants must be able to understand each other without
+ In this class of task, human and robot participants must work together
+ 
+\begin_inset Quotes eld
+\end_inset
+
+shoulder to shoulder
+\begin_inset Quotes erd
+\end_inset
+
+[TODO] to cooperatively solve a problem.
+ While many parts of the required capabilities have been studied for some
+ time, it is only relatively recently that these have been brought together
+ into research platforms which attempt to investigate the entire end-to-end
+ task of collaborative problem-solving.
+\end_layout
+
+\begin_layout Subsection
+Requirements
+\end_layout
+
+\begin_layout Standard
+Human and robot participants must be able to understand each other without
  impediment to the task, must understand each other's roles and intentions
  in the task (
 \emph on
 intention recognition
 \emph default
 ), and must agree on steps to be performed to complete the task (
-\emph on
-collaborative problem solving
-\emph default
- and 
 \emph on
 joint intention
 \emph default
@@ -165,6 +182,75 @@ key "Bauer2008"
 \end_inset
 
  gives a survey of Human-Robot Collaboration.
+\end_layout
+
+\begin_layout Subsection
+Motivating Examples
+\end_layout
+
+\begin_layout Standard
+We draw from the literature a number of motivating examples for cooperative
+ problem-solving.
+\end_layout
+
+\begin_layout Standard
+The first example is drawn from the JAST (Joint-Action Science and Technology)
+ Project.
+ In this project, a human and a robot collaborate to assemble structures
+ from a toy construction kit.
+ Both participants communicate using natural language and to a lesser extent
+ using gestures.
+ The robot can perform some steps of the assembly, instruct the human in
+ the assembly steps required, and correct the human participant if they
+ pick up the wrong piece.
+ [TODO]
+\end_layout
+
+\begin_layout Standard
+The second example is drawn from the Leonardo Project.
+ In this project, a small, highly-expressive robot and a human collaborate
+ to activate a sequence of buttons.
+ The human communicates with speech and gesture, and the robot entirely
+ with gestures.
+ The human teaches the robot to press a button, after which the human and
+ the robot negotiate with each other the steps in pressing several buttons
+ in turn.
+ [TODO]
+\end_layout
+
+\begin_layout Standard
+The third example is a simulated seam-welding exercise as part of the NASA
+ Robonaut Project.
+ This exercise simulates a team of astronauts and robots assembling a structure
+ on a planetary surface.
+ Rather than using real welding tools, the exercise uses spray paint for
+ ease of experimentation.
+ Two astronauts act as 
+\begin_inset Quotes eld
+\end_inset
+
+master welders
+\begin_inset Quotes erd
+\end_inset
+
+, placing panels and performing initial 
+\begin_inset Quotes eld
+\end_inset
+
+tack welds
+\begin_inset Quotes erd
+\end_inset
+
+.
+ One additional astronaut acts as a remote supervisor.
+ The highly articulated Robonaut handles a welding tool to finish the welds,
+ and a mobile rover robot inspects the quality of the welds.
+ When necessary, humans and robots can request additional assistance from
+ each other with their individual tasks; for example, the astronauts can
+ request the inspection rover to turn its spotlight towards the panel they
+ are working on, or the inspector robot can request the advice of the supervisor
+ if it cannot determine the quality of a weld.
+ [TODO Fong2006]
 \end_layout
 
 \begin_layout Subsection
