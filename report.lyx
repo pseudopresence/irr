@@ -67,7 +67,7 @@
 \begin_body
 
 \begin_layout Title
-Collaborative Problem-Solving in Human-Robot Interaction
+A Survey of Collaborative Problem-Solving in Human-Robot Interaction
 \end_layout
 
 \begin_layout Author
@@ -76,6 +76,15 @@ Chris Swetenham (s1149322)
 
 \begin_layout Date
 19th Jan 2012
+\end_layout
+
+\begin_layout Abstract
+Collaborative Problem-Solving brings together many different fields in computer
+ science and artificial intelligence to enable humans and robots to collaborate
+ on shared tasks.
+ We investigate the challenges which need to be overcome, and detail several
+ recent projects which start the work of combining all the required elements
+ for true human-robot collaboration.
 \end_layout
 
 \begin_layout Section
@@ -87,11 +96,8 @@ Problem Statement
 \end_layout
 
 \begin_layout Standard
-Collaborative Problem-Solving is a multidisciplinary problem in Human-Robot
- Interaction which brings together much of the current work in robotics,
- natural language, human-computer interaction, and artificial intelligence.
- In this class of task, human and robot participants must work together
- 
+Collaborative Problem-Solving looks at a class of task in which human and
+ robot participants must work together 
 \begin_inset Quotes eld
 \end_inset
 
@@ -99,15 +105,47 @@ shoulder to shoulder
 \begin_inset Quotes erd
 \end_inset
 
-[TODO] to cooperatively solve a problem.
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hoffman2004"
+
+\end_inset
+
+ to cooperatively solve a problem, often using natural speech and gestures
+ to communicate.
+ This is a multidisciplinary problem in Human-Robot Interaction which brings
+ together much of the current work in robotics, natural language, human-computer
+ interaction, and artificial intelligence.
  While many parts of the required capabilities have been studied for some
  time, it is only relatively recently that these have been brought together
  into research platforms which attempt to investigate the entire end-to-end
  task of collaborative problem-solving.
 \end_layout
 
+\begin_layout Standard
+This problem is important because it is how we interact with other humans
+ and how we ultimately want to interact with intelligent, embodied agents.
+ It encompasses tasks involving teams comprising members with different
+ knowledge and skills, both human and robot.
+\end_layout
+
+\begin_layout Standard
+It is a difficult problem, because it requires many capabilities which have
+ no well-established solution, such as gesture recognition, or mature ones
+ which are still error-prone, such as speech recognition.
+ 
+\end_layout
+
 \begin_layout Subsection
-Requirements
+Challenges
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Challenges"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -128,17 +166,35 @@ joint intention
 safety
 \emph default
 ).
+ The robot may need to understand human speech (
+\emph on
+natural language processing
+\emph default
+) and make itself understood in return (
+\emph on
+natural language generation
+\emph default
+).
+ This may require being able to reason about the knowledge and perpective
+ of other participants (
+\emph on
+cognitive modelling 
+\emph default
+and 
+\emph on
+perspective taking
+\emph default
+).
  Speech output can be accompanied by facial expressions or gestures, such
- as looking at and/or pointing to the object being referenced.
- This an example of 
+ as looking at and/or pointing to the object being referenced (
 \emph on
 multimodal interaction
 \emph default
-.
+).
 \end_layout
 
 \begin_layout Subsection
-Area
+Related Work
 \end_layout
 
 \begin_layout Standard
@@ -250,7 +306,14 @@ tack welds
  request the inspection rover to turn its spotlight towards the panel they
  are working on, or the inspector robot can request the advice of the supervisor
  if it cannot determine the quality of a weld.
- [TODO Fong2006]
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2006"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -259,11 +322,19 @@ Overview
 
 \begin_layout Standard
 In this report we will cover several projects in the area of collaborative
- problem-solving in human-robot interaction between a single robot and single
- human participant.
- We will in particular focus on approaches to natural language generation,
- intention recognition and the use natural conversation in shared planning
- and execution of a task.
+ problem-solving in human-robot interaction in teams with both human and
+ robot participants.
+ We will in examine each of the challenges listed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Challenges"
+
+\end_inset
+
+ in turn, and see how they are tackled by the projects listed above, as
+ well as in related projects where applicable, including focus on approaches
+ to natural language generation, intention recognition and the use natural
+ conversation in shared planning and execution of a task.
 \end_layout
 
 \begin_layout Standard
@@ -300,7 +371,7 @@ reference "sec:Multimodal-Interaction"
  In Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Collaborative-Problem-Solving"
+reference "sec:Collaborative-Problem-Solving-Dialogue"
 
 \end_inset
 
@@ -563,10 +634,10 @@ key "VanDerSluis"
 \end_layout
 
 \begin_layout Section
-Collaborative Problem-Solving
+Collaborative Problem-Solving Dialogue 
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Collaborative-Problem-Solving"
+name "sec:Collaborative-Problem-Solving-Dialogue"
 
 \end_inset
 
@@ -580,7 +651,7 @@ key "Larsson2000"
 
 \end_inset
 
- describes the TRINDI dialog engine toolkit.
+ describes the TRINDI dialogue engine toolkit.
  It is based on the notion of a shared or individual 
 \emph on
 information state
@@ -595,6 +666,23 @@ dialog moves
  according to the task required.
  Simple examples of dialog moves are asking or answering a question.
  The TRINDI toolkit has been used in the JAST project.
+\end_layout
+
+\begin_layout Standard
+A similar toolkit, Ariadne, is used by the NASA HRI/OS.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2006"
+
+\end_inset
+
+ describes NASA's HRI/OS, developed as part of the Robonaut robotic astronaut
+ project.
+ HRI/OS allows for a wide range of interactions between humans and robots,
+ from remote teleoperation to local collaboration.
+ Robots using this system can request help from humans or other robots when
+ they are unable to complete a task by themselves.
 \end_layout
 
 \begin_layout Standard
@@ -621,12 +709,26 @@ grounding acts
 \end_layout
 
 \begin_layout Standard
+TODO - move?
+\end_layout
+
+\begin_layout Standard
 Joint Intention refers to the state of affairs where several participants
  share a common goal and a common plan for achieving that goal.
  In order to reach this situation, both participants must continually communicat
 e their intentions as the execution of the task progresses.
  In the above system, joint intention is achieved by negotiating every change
  to a shared problem-solving state.
+\end_layout
+
+\begin_layout Standard
+TODO - move?
+\end_layout
+
+\begin_layout Standard
+Within the scope of collaborative problem solving, each member of the team,
+ human or robot, can take on different roles.
+ One example is the related roles of teacher and student.
 \end_layout
 
 \begin_layout Standard
@@ -640,21 +742,6 @@ In the Leonardo project, the human participant sets the goal and teaches
 In the reverse direction, in the JAST project, the robot participant sets
  the goal and teaches the human the steps required [TODO].
  The human is taught sub-tasks which are then combined into a larger task.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Fong2006"
-
-\end_inset
-
- describes NASA's HRI/OS, developed as part of the Robonaut robotic astronaut
- project.
- HRI/OS allows for a wide range of interactions between humans and robots,
- from remote teleoperation to local collaboration.
- Robots using this system can request help from humans or other robots when
- they are unable to complete a task by themselves.
 \end_layout
 
 \begin_layout Section
@@ -728,6 +815,134 @@ key "Ferguson2007"
 \end_layout
 
 \begin_layout Section
+Anticipation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Anticipation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beyond the projects listed so far, some recent work has investigated the
+ potential benefits of the robot participants anticipating the actions and
+ needs of the human participants.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hoffman2008"
+
+\end_inset
+
+ investigates a joint task between a human and a robotic lamp under time
+ pressure.
+ They found that TODO.
+ TODO 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shah2011"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Safety
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Safety"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If humans and robots are to collaborate in close proximity, safety is an
+ important issue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Alami2006"
+
+\end_inset
+
+.
+ In traditional industrial robots, humans and robots are simply kept separated
+ by distance or physical barriers and have a kill switch to stop the robot
+ entirely in an emergency.
+ This is the approach taken in the JAST project, where the robot only interacts
+ with its own side of the table, except to hand an object to the human participa
+nt.
+\end_layout
+
+\begin_layout Standard
+The second version of the Robonaut project tackled the issue of safe interaction
+ directly, with a triply-redundant system using feedback from motors to
+ monitor and limit the forces applied by the robot to its environment.
+ As a result, collisions with a human or with another unexpected obstacle
+ will simply stop or slow the motion of the robot to safe levels
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diftler2011"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Evaluation Methods
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Evaluation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Evaluation of collaborative problem-solving tasks can be difficult since
+ there are many possible metrics, and some of the interesting ones can be
+ expensive to gather since they require human annotation of captured data.
+ It is straightforward to capture video and audio data of the task performance,
+ as well as tracking internal state of the robot and measuring the task
+ success or failure and the time taken for the task.
+ Others, such as the number of errors made or other properties of the dialog,
+ may require human annotation.
+\end_layout
+
+\begin_layout Standard
+The evaluation methods used in collaborative problem-solving can be traced
+ back to ones used in Human-Computer Interaction and Natural Language Generation
+, for example the PARADISE evaluation framework
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Walker1997"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In practice, evaluation is based on several or all of: task success or failure,
+ time taken to complete the task, rate of errors based on human annotation
+ of session recordings, and human participant satisfaction based on standard
+ questionnaires
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2005,Foster2009a,Shah2011"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Discussion
 \begin_inset CommandInset label
 LatexCommand label
@@ -740,72 +955,47 @@ name "sec:Discussion"
 
 \begin_layout Standard
 Collaborative Problem-Solving is a dynamic and promising area of Human-Robot
- Interaction research, with applications in space[TODO], medical and elderly
- care[TODO], and any context in which it is desirable to have autonomous
- robot participants perform tasks in a dangerous environment in collaboration
- with human participants, such as military applications[TODO] and urban
- search and rescue[TODO].
+ Interaction research, with applications in space
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2005"
+
+\end_inset
+
+, medical and elderly care
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fong2003"
+
+\end_inset
+
+, and any context in which it is desirable to have autonomous robot participants
+ perform tasks in a dangerous environment in collaboration with human participan
+ts, such as military applications and urban search and rescue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Goodrich2007"
+
+\end_inset
+
+.
  Collaborative problem-solving, mixed-intiative and multimodal interactions
  allow for natural integration of robot members in a team without requiring
  special training of the human participants, and as the robot becomes more
  aware of intent and social cues, it is regarded less as a tool and more
- as a participant[TODO].
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Projects:
-\end_layout
-
-\begin_layout Plain Layout
-Lino->iCat
-\end_layout
-
-\begin_layout Plain Layout
-iCat + AC -> JAST -> JAMES
-\end_layout
-
-\begin_layout Plain Layout
-Kismet -> Leonardo
-\end_layout
-
-\begin_layout Plain Layout
-INDIGO
-\end_layout
-
-\begin_layout Plain Layout
-Paro
-\end_layout
-
-\begin_layout Plain Layout
-Robonaut -> Robonaut 2
-\end_layout
-
-\begin_layout Plain Layout
-Build core of lit review around the software architectures used in each
- project? And maybe some various strategies for error-handling, etc scenarios?
-\end_layout
-
-\begin_layout Plain Layout
-GIVE challenge: can give history of entries, strategies, performance
-\end_layout
-
-\begin_layout Plain Layout
-Talk about safety? Appearance, uncanny valley?
-\end_layout
+ as a participant
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hoffman2007b"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-btprint "btPrintAll"
 bibfiles "References/IRR"
 options "amsalpha"
 
