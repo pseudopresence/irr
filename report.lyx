@@ -540,13 +540,56 @@ name "sec:Natural-Language-Processing"
 \end_layout
 
 \begin_layout Standard
-In general, Speech Recognition and Generation are treated as solved problems
- in human-robot interaction, with some leeway for the inevitable interpretation
- errors from either participant.
- Speech is then treated in terms of text.
- Natural Language Processing is a well established field dealing with processing
+Speech is processed in several forms in a collaborate problem-solving system.
+ The lowest level is raw sound samples captured from or output to the physical
+ world.
+ The next level is a textual representation, in sentences or sentence fragments.
+ The next level after this is more abstract and consists of syntax trees
+ representing the information communicated.
+ At this level, the representation can be independent of the human language
+ used by the system.
+ The JAST project, for example, is able to converse in both English and
+ German
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foster2009a"
+
+\end_inset
+
+.
+ The final level of abstraction is whatever internal representation is used
+ by the dialogue engine to represent the state of the dialogue.
+\end_layout
+
+\begin_layout Standard
+Translation between these representations is handled by different components
+ of the system.
+ Translation between speech and text is done by Speech Recognition and Text-To-S
+peech.
+ Translation between text and abstract sentences is done my Natural Language
+ Processing and Natural Language Generation.
+ Translation between abstract sentences and internal representations is
+ done by the Dialogue Manager.
+\end_layout
+
+\begin_layout Standard
+In general, Speech Recognition and Text-To-Speech are treated as solved
+ problems in human-robot interaction, with some leeway for the inevitable
+ interpretation errors from either participant.
+ It will not be discussed further in this paper.
+\end_layout
+
+\begin_layout Standard
+Natural Language Processing is a well established field dealing with processing
  the text into some more abstract model.
- Natural Language Generation is the counterpart of Natural Language Processing.
+ It is a fairly well-solved problem in the context of collaborative problem-solv
+ing, since it is a restricted domain: the participants will be discussing
+ only the shared world they are operating in, and their intentions with
+ respect to the task.
+\end_layout
+
+\begin_layout Standard
+Natural Language Generation is the counterpart of Natural Language Processing.
  It refers to the production of human text or speech from some internal
  data structure specific to the agent.
  In the context of this review the most important aspects are communicating
@@ -593,6 +636,17 @@ human-like
 \end_inset
 
  the output of an NLG system is.
+\end_layout
+
+\begin_layout Standard
+The Dialogue Manager is discussed in its own Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Dialogue"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -838,10 +892,6 @@ grounding acts
 \end_layout
 
 \begin_layout Standard
-TODO - move? rewrite?
-\end_layout
-
-\begin_layout Standard
 The dialogue drives the shared execution of the task, and different ways
  of collaborating lead to different dialogue managers.
  For example, within the scope of collaborative problem solving, each member
@@ -1027,15 +1077,29 @@ key "Hoffman2008"
 
  investigates a joint task between a human and a robotic lamp under time
  pressure.
- They found that TODO.
- TODO 
+ The robotic lamp could be commanded to move by pointing by the human, and
+ could be told to change colour.
+ The human and robot team had to complete a sequence of actions in the shortest
+ time possible.
+ They found that they could make the robot learn to anticipate the actions
+ of their partner and start moving to help them rather than reacting after
+ the fact.
+ In some cases, the robot member became so effective that the human participant
+ felt they were letting the team down with their own performance.
+ This suggests that building anticipation into collaborative systems can
+ greatly enhance their performance.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Shah2011"
 
 \end_inset
 
-.
+ applies these same ideas to an assembly task similar to that in the JAST
+ project.
+ By anticipating the required pieces it could bring them before the human
+ participant requested them, significantly reducing the time the human participa
+nt spent idle waiting for the robot.
 \end_layout
 
 \begin_layout Subsection
