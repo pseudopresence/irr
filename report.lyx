@@ -258,8 +258,14 @@ The first example is drawn from the JAST (Joint-Action Science and Technology)
  using gestures.
  The robot can perform some steps of the assembly, instruct the human in
  the assembly steps required, and correct the human participant if they
- pick up the wrong piece.
- [TODO]
+ pick up the wrong piece
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rickert2008"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -270,8 +276,14 @@ The second example is drawn from the Leonardo Project.
  with gestures.
  The human teaches the robot to press a button, after which the human and
  the robot negotiate with each other the steps in pressing several buttons
- in turn.
- [TODO]
+ in turn
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breazeal2004b"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -305,15 +317,14 @@ tack welds
  each other with their individual tasks; for example, the astronauts can
  request the inspection rover to turn its spotlight towards the panel they
  are working on, or the inspector robot can request the advice of the supervisor
- if it cannot determine the quality of a weld.
- 
+ if it cannot determine the quality of a weld
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Fong2006"
 
 \end_inset
 
- 
+.
 \end_layout
 
 \begin_layout Subsection
@@ -338,6 +349,19 @@ reference "sub:Challenges"
 \end_layout
 
 \begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:arch"
+
+\end_inset
+
+ shows the general software architecture for collaborative problem-solving
+ robots.
+ 
+\end_layout
+
+\begin_layout Standard
 In Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -345,7 +369,7 @@ reference "sec:Human-Robot-Communication"
 
 \end_inset
 
- we will look at Human-Robot communication in general.
+ we will look at forms of Human-Robot communication in general.
  In Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -367,29 +391,33 @@ reference "sec:Multimodal-Interaction"
 
 \end_inset
 
- we will look at different types of communication.
- In Sections 
+ we will look at different types and stages of communication.
+ In Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Collaborative-Problem-Solving-Dialogue"
+reference "sec:Dialogue"
 
 \end_inset
 
-, 
+, we will look at how the collaborative problem-solving aspect comes together
+ in the dialogue between the participants.
+ In Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Learning"
+reference "sec:Evaluation"
 
 \end_inset
 
-,
+ we will examine how performance in collaborative problem-solving tasks
+ is evaluated.
+ In Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Mixed-Initiative-Interaction"
+reference "sec:Future-Directions"
 
 \end_inset
 
- we will look at how the collaborative problem-solving aspect comes together.
+ we will discuss recent and future directions in collaborative problem-solving.
  Finally in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -398,6 +426,50 @@ reference "sec:Discussion"
 \end_inset
 
  we will discuss and summarise.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename drawing.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Example architecture of a robot's software for collaborative problem-solving
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:arch"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -437,8 +509,15 @@ key "Breazeal2004"
 
  focuses on an expressive robot capable of many facial and body gestures
  and without any natural language generation or speech synthesis capabilites.
- The JAST project [TODO] combines two industrial arms with the iCat expressive
- robot face, and features speech generation and recognition.
+ The JAST project 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foster2006a"
+
+\end_inset
+
+ combines two industrial arms with the iCat expressive robot face, and features
+ speech generation and recognition.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -447,9 +526,6 @@ key "VanBreemen2004"
 \end_inset
 
  describes the Lino and iCat robots and the principles used to animate them.
- Museum guide robots such as INDIGO typically feature speech but not gesture
- modes of communication [TODO] although the Robotinho project does use gestures
- [TODO].
 \end_layout
 
 \begin_layout Section
@@ -618,7 +694,14 @@ When performing a task, humans have many simultaneous modes of interaction:
 \begin_layout Standard
 In the JAST project, the generation of referring expressions and the use
  of gestures were both studied and evaluated for their effectiveness in
- communicating with the human participant [TODO].
+ communicating with the human participant 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foster2009a"
+
+\end_inset
+
+.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -629,19 +712,43 @@ key "VanDerSluis"
  gives an algorithm for the generation of multimodal referring expressions.
  In the Leonardo project, speech output was avoided entirely in favour of
  an expressive body and facial design.
- [TODO] describes the MultiML language for representing multimodal actions
- in a dialogue.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Giuliani2008"
+
+\end_inset
+
+ describes the MultiML language for representing multimodal actions in a
+ dialogue.
 \end_layout
 
 \begin_layout Section
-Collaborative Problem-Solving Dialogue 
+Dialogue 
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Collaborative-Problem-Solving-Dialogue"
+name "sec:Dialogue"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Collaborative problem-solving requires a dialogue engine which at minimum
+ can navigate through pre-defined dialogues and keep track of the current
+ state.
+ More advanced dialogue engines include planning and plan or intention recogniti
+on components which allow the engine to reason about and react to the intentions
+ of other participants.
+\end_layout
+
+\begin_layout Standard
+Joint Intention refers to the state of affairs where several participants
+ share a common goal and a common plan for achieving that goal.
+ In order to reach this situation, both participants must continually communicat
+e their intentions as the execution of the task progresses.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -673,6 +780,14 @@ A similar toolkit, Ariadne, is used by the NASA HRI/OS.
  
 \begin_inset CommandInset citation
 LatexCommand cite
+key "Denecke2002"
+
+\end_inset
+
+ describes the Ariandne toolkit.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Fong2006"
 
 \end_inset
@@ -683,6 +798,18 @@ key "Fong2006"
  from remote teleoperation to local collaboration.
  Robots using this system can request help from humans or other robots when
  they are unable to complete a task by themselves.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rich2001"
+
+\end_inset
+
+ describes the highly influential COLLAGEN dialogue system for collaborative
+ dialogue, developed in the context of collaborative problem-solving with
+ a software agent rather than a robot.
 \end_layout
 
 \begin_layout Standard
@@ -706,191 +833,44 @@ grounding acts
 \emph default
  which handle turn-taking in conversation, requests for acknowledgement,
  and requests for clarification.
-\end_layout
-
-\begin_layout Standard
-TODO - move?
-\end_layout
-
-\begin_layout Standard
-Joint Intention refers to the state of affairs where several participants
- share a common goal and a common plan for achieving that goal.
- In order to reach this situation, both participants must continually communicat
-e their intentions as the execution of the task progresses.
- In the above system, joint intention is achieved by negotiating every change
+ In this system, joint intention is achieved by negotiating every change
  to a shared problem-solving state.
 \end_layout
 
 \begin_layout Standard
-TODO - move?
+TODO - move? rewrite?
 \end_layout
 
 \begin_layout Standard
-Within the scope of collaborative problem solving, each member of the team,
- human or robot, can take on different roles.
+The dialogue drives the shared execution of the task, and different ways
+ of collaborating lead to different dialogue managers.
+ For example, within the scope of collaborative problem solving, each member
+ of the team, human or robot, can take on different roles.
  One example is the related roles of teacher and student.
-\end_layout
-
-\begin_layout Standard
-In the Leonardo project, the human participant sets the goal and teaches
- the robot the steps required [TODO].
- For example, the robot is taught to press a button, and then is given the
- task of pressing several buttons.
-\end_layout
-
-\begin_layout Standard
-In the reverse direction, in the JAST project, the robot participant sets
- the goal and teaches the human the steps required [TODO].
- The human is taught sub-tasks which are then combined into a larger task.
-\end_layout
-
-\begin_layout Section
-Learning
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Learning"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In terms of working on a shared task, the Leonardo project focuses on the
- human teaching the robot how to participate in a task.
- The idea is that active tutelage can be much more effective than relying
- on blind experimentation by the robot or complex, brittle a priori knowledge
- in getting the robot to perform a new task.
-\end_layout
-
-\begin_layout Section
-Mixed-Initiative Interaction
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Mixed-Initiative-Interaction"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-When both participants contribute towards the goal, this is termed a Mixed-Initi
-ative system.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Guinn1996"
-
-\end_inset
-
- describes an early model of mixed-initiative communication based on exchanging
- information and deductions between agents until a conclusion is reached.
- 
+ In the Leonardo project, the human participant sets the goal and teaches
+ the robot the steps required
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Breazeal2004b"
 
 \end_inset
 
- describe how Leonardo can suggest it takes the initiative or request help
- from its human partner.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Blaylock2005"
-
-\end_inset
-
- describe a model for negotiating shared goals and plans between participants,
- and use it to analyse a planning discussion between two human participants.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Ferguson2007"
-
-\end_inset
-
- describe an architecture for implementing a similar model in an agent.
-\end_layout
-
-\begin_layout Section
-Anticipation
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Anticipation"
-
-\end_inset
-
-
+.
+ For example, the robot is taught to press a button, and then is given the
+ task of pressing several buttons.
 \end_layout
 
 \begin_layout Standard
-Beyond the projects listed so far, some recent work has investigated the
- potential benefits of the robot participants anticipating the actions and
- needs of the human participants.
- 
+In the reverse direction, in the JAST project, the robot participant sets
+ the goal and teaches the human the steps required 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Hoffman2008"
-
-\end_inset
-
- investigates a joint task between a human and a robotic lamp under time
- pressure.
- They found that TODO.
- TODO 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Shah2011"
+key "Foster2009a"
 
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Section
-Safety
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Safety"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If humans and robots are to collaborate in close proximity, safety is an
- important issue
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Alami2006"
-
-\end_inset
-
-.
- In traditional industrial robots, humans and robots are simply kept separated
- by distance or physical barriers and have a kill switch to stop the robot
- entirely in an emergency.
- This is the approach taken in the JAST project, where the robot only interacts
- with its own side of the table, except to hand an object to the human participa
-nt.
-\end_layout
-
-\begin_layout Standard
-The second version of the Robonaut project tackled the issue of safe interaction
- directly, with a triply-redundant system using feedback from motors to
- monitor and limit the forces applied by the robot to its environment.
- As a result, collisions with a human or with another unexpected obstacle
- will simply stop or slow the motion of the robot to safe levels
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Diftler2011"
-
-\end_inset
-
-.
+ The human is taught sub-tasks which are then combined into a larger task.
 \end_layout
 
 \begin_layout Section
@@ -943,6 +923,166 @@ key "Fong2005,Foster2009a,Shah2011"
 \end_layout
 
 \begin_layout Section
+Future Directions
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Future-Directions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Learning
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Learning"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In terms of working on a shared task, the Leonardo project focuses on the
+ human teaching the robot how to participate in a task.
+ The idea is that active tutelage can be much more effective than relying
+ on blind experimentation by the robot or complex, brittle a priori knowledge
+ in getting the robot to perform a new task.
+\end_layout
+
+\begin_layout Subsection
+Mixed-Initiative Interaction
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Mixed-Initiative-Interaction"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When both participants contribute towards the goal, this is termed a Mixed-Initi
+ative system.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Guinn1996"
+
+\end_inset
+
+ describes an early model of mixed-initiative communication based on exchanging
+ information and deductions between agents until a conclusion is reached.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breazeal2004b"
+
+\end_inset
+
+ describe how Leonardo can suggest it takes the initiative or request help
+ from its human partner.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Blaylock2005"
+
+\end_inset
+
+ describe a model for negotiating shared goals and plans between participants,
+ and use it to analyse a planning discussion between two human participants.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ferguson2007"
+
+\end_inset
+
+ describe an architecture for implementing a similar model in an agent.
+\end_layout
+
+\begin_layout Subsection
+Anticipation
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Anticipation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beyond the projects listed so far, some recent work has investigated the
+ potential benefits of the robot participants anticipating the actions and
+ needs of the human participants.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hoffman2008"
+
+\end_inset
+
+ investigates a joint task between a human and a robotic lamp under time
+ pressure.
+ They found that TODO.
+ TODO 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shah2011"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Safety
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Safety"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If humans and robots are to collaborate in close proximity, safety is an
+ important issue
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Alami2006"
+
+\end_inset
+
+.
+ In traditional industrial robots, humans and robots are simply kept separated
+ by distance or physical barriers and have a kill switch to stop the robot
+ entirely in an emergency.
+ This is the approach taken in the JAST project, where the robot only interacts
+ with its own side of the table, except to hand an object to the human participa
+nt.
+\end_layout
+
+\begin_layout Standard
+The second version of the Robonaut project tackled the issue of safe interaction
+ directly, with a triply-redundant system using feedback from motors to
+ monitor and limit the forces applied by the robot to its environment.
+ As a result, collisions with a human or with another unexpected obstacle
+ will simply stop or slow the motion of the robot to safe levels
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diftler2011"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Discussion
 \begin_inset CommandInset label
 LatexCommand label
@@ -979,11 +1119,18 @@ key "Goodrich2007"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+In many cases the scope of the work on collaborative problem-solving is
+ limited by the manipulation and visual understanding capabilities of the
+ robot, but the nature of the tasks undertaken remains realistic and relavant
+ to applications in the real world.
  Collaborative problem-solving, mixed-intiative and multimodal interactions
  allow for natural integration of robot members in a team without requiring
  special training of the human participants, and as the robot becomes more
- aware of intent and social cues, it is regarded less as a tool and more
- as a participant
+ aware of intent and social cues, it becomes an efficient collaborator and
+ is regarded less as a tool and more as a participant
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hoffman2007b"
