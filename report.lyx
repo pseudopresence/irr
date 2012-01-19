@@ -175,16 +175,6 @@ natural language processing
 natural language generation
 \emph default
 ).
- This may require being able to reason about the knowledge and perpective
- of other participants (
-\emph on
-cognitive modelling 
-\emph default
-and 
-\emph on
-perspective taking
-\emph default
-).
  Speech output can be accompanied by facial expressions or gestures, such
  as looking at and/or pointing to the object being referenced (
 \emph on
@@ -661,7 +651,9 @@ name "sec:Gesture-Recognition-and"
 \end_layout
 
 \begin_layout Standard
-When humans communicate in a shared task they will often use gestures as
+An important part of collaborative-problem solving is the understanding
+ and use of gestures.
+ When humans communicate in a shared task they will often use gestures as
  well as speech.
  These may serve several purposes: to convey intention or emotion, to direct
  the other participant's actions or attention, or to directly execute a
@@ -672,8 +664,13 @@ When humans communicate in a shared task they will often use gestures as
 \end_layout
 
 \begin_layout Standard
-In a robot, gesture recognition will be performed as a step after the visual
- interpretation of a scene from video data.
+Gesture recognition can be performed on an internal model of the world after
+ computer vision has processed the raw video input.
+ For example, in the software stacks available for the Microsoft Kinect
+ sensor, the raw video and range data is segmented into regions, and the
+ position of the joints and skeleton of any humans in the scene are inferred.
+ From this joint data, gestures can be recognised by a variety of machine-learni
+ng methods.
 \end_layout
 
 \begin_layout Subsection
@@ -908,10 +905,7 @@ key "Breazeal2004b"
 .
  For example, the robot is taught to press a button, and then is given the
  task of pressing several buttons.
-\end_layout
-
-\begin_layout Standard
-In the reverse direction, in the JAST project, the robot participant sets
+ In the reverse direction, in the JAST project, the robot participant sets
  the goal and teaches the human the steps required 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -959,10 +953,11 @@ key "Walker1997"
 \end_layout
 
 \begin_layout Standard
-In practice, evaluation is based on several or all of: task success or failure,
- time taken to complete the task, rate of errors based on human annotation
- of session recordings, and human participant satisfaction based on standard
- questionnaires
+In practice, evaluation is done in much the same way in collaborative problem-so
+lving research.
+ It is based on: task success or failure, time taken to complete the task,
+ rate of errors based on human annotation of session recordings, and human
+ participant satisfaction based on standard questionnaires
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Fong2005,Foster2009a,Shah2011"
@@ -984,7 +979,7 @@ name "sec:Future-Directions"
 \end_layout
 
 \begin_layout Subsection
-Learning
+Teaching and Learning
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Learning"
@@ -999,7 +994,14 @@ In terms of working on a shared task, the Leonardo project focuses on the
  human teaching the robot how to participate in a task.
  The idea is that active tutelage can be much more effective than relying
  on blind experimentation by the robot or complex, brittle a priori knowledge
- in getting the robot to perform a new task.
+ in getting the robot to perform a new task
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Breazeal2004b"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1014,8 +1016,8 @@ name "sub:Mixed-Initiative-Interaction"
 \end_layout
 
 \begin_layout Standard
-When both participants contribute towards the goal, this is termed a Mixed-Initi
-ative system.
+When both participants contribute towards the goal, rather than one participant
+ driving the dialogue, this is termed a Mixed-Initiative system.
  
 \begin_inset CommandInset citation
 LatexCommand cite
